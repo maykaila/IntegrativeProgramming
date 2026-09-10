@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Financial Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Spending Analytics</h1>
+        <nav class="nav-links">
+            <a href="index.html">Tracker</a>
+            <a href="budget.html">Budgets</a>
+            <a href="goals.html">Goals</a>
+            <a href="analytics.html" class="active">Analytics</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Analytics Top Metrics -->
+        <section class="overview-grid">
+            <div class="card balance-card">
+                <h4>Savings Rate</h4>
+                <h1>76.5%</h1>
+            </div>
+
+            <div class="card summary-box income">
+                <h4>Daily Avg. Spend</h4>
+                <p>₱24.19</p>
+            </div>
+
+            <div class="card summary-box expense">
+                <h4>Largest Expense</h4>
+                <p>₱500.00</p>
+            </div>
+        </section>
+
+        <!-- Insights and Breakdown -->
+        <section class="content-grid">
+            <!-- Left: Breakdown Table -->
+            <div class="card">
+                <h3>Expense Distribution</h3>
+                <div class="retro-table">
+                    <div class="table-row table-head">
+                        <span>Category</span>
+                        <span>Share</span>
+                        <span>Total Spent</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Subscriptions</span>
+                        <span>66.7%</span>
+                        <span>₱500.00</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Groceries</span>
+                        <span>20.0%</span>
+                        <span>₱150.00</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Utilities</span>
+                        <span>13.3%</span>
+                        <span>₱100.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Insights Box -->
+            <div class="card">
+                <h3>System Insights</h3>
+                <div class="insight-box">
+                    <h4>Healthy Cash Flow</h4>
+                    <p>Your income is currently outpacing your expenses by <strong>₱2,450.00</strong> this cycle.</p>
+                </div>
+                <div class="insight-box" style="margin-top: 15px; border-left-color: #f26888;">
+                    <h4>Top Expense Alert</h4>
+                    <p>Subscription and internet costs represent over <strong>60%</strong> of your total outflow.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
