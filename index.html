@@ -17,49 +17,36 @@
         <section class="overview-grid">
             <div class="card balance-card">
                 <h4>Total Balance</h4>
-                <h1>₱2,450.00</h1>
+                <h1 id="total-balance">₱0.00</h1>
             </div>
 
             <div class="card summary-box income">
                 <h4>Total Income</h4>
-                <p>+₱3,200.00</p>
+                <p id="total-income">+₱0.00</p>
             </div>
 
             <div class="card summary-box expense">
                 <h4>Total Expenses</h4>
-                <p>-₱750.00</p>
+                <p id="total-expense">-₱0.00</p>
             </div>
         </section>
 
         <!-- Main Content (Two Columns) -->
         <section class="content-grid">
-            <!-- Left Column: Transaction History -->
+            <!-- Left Column: Transaction History (Read / Delete / Edit Triggers) -->
             <div class="card">
                 <h3>Transaction History</h3>
-                <ul class="transaction-list">
-                    <li class="transaction-item income">
-                        <span class="desc">Monthly Salary</span>
-                        <span class="amount">+₱3,200.00</span>
-                    </li>
-                    <li class="transaction-item expense">
-                        <span class="desc">Grocery Shopping</span>
-                        <span class="amount">-₱150.00</span>
-                    </li>
-                    <li class="transaction-item expense">
-                        <span class="desc">Electricity Bill</span>
-                        <span class="amount">-₱100.00</span>
-                    </li>
-                    <li class="transaction-item expense">
-                        <span class="desc">Internet Subscription</span>
-                        <span class="amount">-₱500.00</span>
-                    </li>
+                <ul id="transaction-list" class="transaction-list">
+                    <!-- Transactions injected dynamically via JS -->
                 </ul>
             </div>
 
-            <!-- Right Column: Add Transaction Form -->
+            <!-- Right Column: Form (Create / Update) -->
             <div class="card">
-                <h3>Add New Transaction</h3>
-                <form>
+                <h3 id="form-heading">Add New Transaction</h3>
+                <form id="transaction-form">
+                    <input type="hidden" id="edit-id" value="">
+
                     <div class="form-group">
                         <label for="description">Description</label>
                         <input type="text" id="description" placeholder="Enter description..." required>
@@ -76,15 +63,19 @@
 
                         <div class="form-group">
                             <label for="amount">Amount (₱)</label>
-                            <input type="number" id="amount" placeholder="0.00" step="0.01" required>
+                            <input type="number" id="amount" placeholder="0.00" step="0.01" min="0.01" required>
                         </div>
                     </div>
 
-                    <button type="submit" class="submit-btn">Add Transaction</button>
+                    <div class="button-group">
+                        <button type="submit" id="submit-btn" class="btn btn-primary">Add Transaction</button>
+                        <button type="button" id="cancel-btn" class="btn btn-secondary" style="display: none;">Cancel</button>
+                    </div>
                 </form>
             </div>
         </section>
     </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
